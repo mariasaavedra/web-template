@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCountdown } from "../../hooks/useCountdown";
 import Button from "../Button/Button";
 import styles from "./ClassCard.module.css";
+import Image from "next/image";
 
 export interface ClassCardProps {
   startTime: Date;
@@ -11,15 +12,21 @@ export interface ClassCardProps {
   attending: number;
   seats: number;
   price: string | number;
+  coverUrl?: string;
 }
 
 export default function ClassCard(props: ClassCardProps) {
   const [days, hours, minutes, seconds] = useCountdown(props.startTime);
   return (
     <div className={styles.ClassCardComponent}>
-      <img
+      <Image
         className={"overflow-hidden absolute top-0 left-0 z-[-1]"}
-        src="images/squares.svg"
+        src={props?.coverUrl || "/images/squares.svg"}
+        layout="fill"
+        width='500px'
+        height="500px"
+        objectPosition={-100}
+        objectFit='contain'
         alt="background pattern"
       />
       <div className={styles.countdown}>

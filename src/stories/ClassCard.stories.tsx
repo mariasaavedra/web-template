@@ -36,6 +36,7 @@ const defaultProps: ClassCardProps = {
     location: "Kansas City, Missouri",
     price: "$1.99",
     seats: 20,
-    attending: 10
+    attending: 10,
+    coverUrl: "/../images/squares.svg"
 };
 Default.args = defaultProps;
