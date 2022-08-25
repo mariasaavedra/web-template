@@ -7,6 +7,7 @@
 
 html,
 body {
+  background: #f2f2f2;
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif !important;
@@ -21,7 +22,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -29,4 +30,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */

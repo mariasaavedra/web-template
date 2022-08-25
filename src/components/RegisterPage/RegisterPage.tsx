@@ -6,6 +6,7 @@ import {
   MaybeParentComponentProps,
   ParentComponentProps,
 } from "../../interfaces/ParentComponentProps";
+import Button from "../Button/Button";
 import Input from "../Input/Input";
 
 const Label = ({ children }: ParentComponentProps) => (
@@ -85,7 +86,7 @@ const RegisterPage = ({ cancel }: RegisterPageProps) => {
       onSubmit={registerUser}
     >
       <div className="py-12">
-        <img src="images/logo.png" alt="logo" />
+        <img src="/images/logo.png" alt="logo" />
       </div>
       <div>
         <h1 className="font-bold text-xl mb-1">REGISTER</h1>
@@ -114,9 +115,9 @@ const RegisterPage = ({ cancel }: RegisterPageProps) => {
           <div className="relative">
             <Label>Password</Label>
             <Input type="password" placeholder="Enter Password" {...password} />
-            <button className="absolute right-6 top-11 text-naturalGrey-400">
+            <a className="absolute right-6 top-11 text-naturalGrey-400">
               {ShowPasswordIcon}
-            </button>
+            </a>
           </div>
           <div className="relative">
             <Label>Confirm Password</Label>
@@ -125,17 +126,17 @@ const RegisterPage = ({ cancel }: RegisterPageProps) => {
               placeholder="Enter Confirm Password"
               {...password}
             />
-            <button className="absolute right-6 top-11 text-naturalGrey-400">
+            <a className="absolute right-6 top-11 text-naturalGrey-400">
               {ShowPasswordIcon}
-            </button>
+            </a>
           </div>
           <div className="col-span-2">
             <Label>Location</Label>
             <div className="flex relative">
               <Input placeholder="Choose Location" {...location} />
-              <button className="border rounded-2xl p-4 mr-1">
+              <a className="border rounded-2xl p-4 mr-1">
                 {LocationIcon}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -169,17 +170,17 @@ const RegisterPage = ({ cancel }: RegisterPageProps) => {
             {errors.registrationMessage}
           </div>
         )}
-        <button className="rounded-2xl bg-naturalGrey-800 hover:bg-primaryGreen-700 text-white w-full py-2 mb-4 transition-all">
+        <Button className="rounded-2xl bg-naturalGrey-800 hover:bg-primaryGreen-700 text-white w-full py-2 mb-4 transition-all">
           CREATE ACCOUNT
-        </button>
-        <div className="flex justify-center mt-2">
+        </Button>
+        <div className="flex justify-center d-block mt-2">
           Already have an account?
-          <button
-            className="text-primaryGreen-500 ml-2 font-bold hover:text-primaryGreen-700"
+          <a
+            className="d-block ext-primaryGreen-500 ml-2 font-bold "
             onClick={cancel}
           >
             Log In
-          </button>
+          </a>
         </div>
       </div>
     </form>
