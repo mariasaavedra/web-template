@@ -7,7 +7,7 @@ import ClassCard, { ClassCardProps } from '../components/ClassCard/ClassCard';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/ClassCard',
+    title: 'Library/Components/ClassCard',
     component: ClassCard,
      parameters: {
         design: {

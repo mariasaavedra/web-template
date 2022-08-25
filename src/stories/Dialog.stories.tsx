@@ -5,7 +5,7 @@ import Dialog, { DialogProps } from '../components/Dialog/Dialog';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/Dialog',
+    title: 'Library/Components/Dialog',
     component: Dialog,
     //  parameters: {
     //     design: {

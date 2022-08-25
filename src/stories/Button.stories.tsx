@@ -5,7 +5,7 @@ import Button, { ButtonProps } from "../components/Button/Button";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Library/Button",
+  title: "Library/Components/Button",
   component: Button,
   parameters: {
     design: {

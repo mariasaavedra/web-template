@@ -5,7 +5,7 @@ import Logo, { LogoProps } from '../components/Logo/Logo';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/Logo',
+    title: 'Library/Components/Logo',
     component: Logo,
     //  parameters: {
     //     design: {

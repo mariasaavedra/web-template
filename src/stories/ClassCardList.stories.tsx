@@ -7,7 +7,7 @@ import ClassCardList, {
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Library/ClassCardList",
+  title: "Library/Components/ClassCardList",
   component: ClassCardList,
   parameters: {
     design: {

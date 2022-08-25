@@ -5,7 +5,7 @@ import NavItem, { NavItemProps } from '../components/NavItem/NavItem';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/NavItem',
+    title: 'Library/Components/NavItem',
     component: NavItem,
     //  parameters: {
     //     design: {

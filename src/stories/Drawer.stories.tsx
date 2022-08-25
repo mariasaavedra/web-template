@@ -5,7 +5,7 @@ import Drawer, { DrawerProps } from '../components/Drawer/Drawer';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/Drawer',
+    title: 'Library/Components/Drawer',
     component: Drawer,
     //  parameters: {
     //     design: {

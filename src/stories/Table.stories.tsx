@@ -6,7 +6,7 @@ import Button from "../components/Button/Button";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Library/Table",
+  title: "Library/Components/Table",
   component: Table,
   //  parameters: {
   //     design: {

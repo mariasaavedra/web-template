@@ -4,7 +4,7 @@ import Input, { InputProps } from '../components/Input/Input';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/Input',
+    title: 'Library/Components/Input',
     component: Input,
     //  parameters: {
     //     design: {

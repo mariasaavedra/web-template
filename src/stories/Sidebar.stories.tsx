@@ -5,7 +5,7 @@ import Sidebar, { SidebarProps } from '../components/Sidebar/Sidebar';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Library/Sidebar',
+    title: 'Library/Components/Sidebar',
     component: Sidebar,
     //  parameters: {
     //     design: {
