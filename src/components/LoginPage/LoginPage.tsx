@@ -1,45 +1,40 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { SyntheticEvent, useState } from 'react'
 import LoginWithEmail from './LoginWithEmail'
-import { useHistory } from 'react-router-dom'
 import RegisterPage from '../RegisterPage/RegisterPage'
 import useInput from '../../hooks/useInput'
-import Input from '../UI/Input'
 import LoginWithFacebook from './LoginWithFacebook'
+import Input from '../Input/Input'
 
 
 const LoginPage = () => {
   const userName = useInput('', (t) => t.length > 1)
   const password = useInput('', (t) => t.length > 1)
   const [loggingMethod, setLoggingMethod] = useState('password')
-  const dispatch = useDispatch()
-  const history = useHistory()
-
-  const login = (event) => {
+  const login = (event: SyntheticEvent) => {
     event.preventDefault()
 
     if (userName.isValid && password.isValid) {
-      dispatch({
-        type: 'LOGIN',
-        payload: {
-          username: userName.value,
-          password: password.value
-        }
-      })
-    } else {
-      dispatch({ type: 'LOGIN_INPUT_ERROR' })
+    //   dispatch({
+    //     type: 'LOGIN',
+    //     payload: {
+    //       username: userName.value,
+    //       password: password.value
+    //     }
+    //   })
+    // } else {
+    //   dispatch({ type: 'LOGIN_INPUT_ERROR' })
     }
   }
 
   return (
     <div className='flex w-full h-screen'>
       <div className='hidden lg:block '>
-        <img src='images/leftSideImage.png' alt='leftSideImage' className='object-cover h-full' />
+        <img src='/images/leftSideImage.png' alt='leftSideImage' className='object-cover h-full' />
       </div>
       {loggingMethod === 'password' && (
         <form className='p-4 md:p-12 flex flex-col grow justify-between' onSubmit={login}>
           <div className='py-12'>
-            <img src='images/logo.png' alt='logo' />
+            <img src='/images/logo.png' alt='logo' />
           </div>
           <div>
             <h1 className='font-bold text-xl mb-1'>LOGIN</h1>

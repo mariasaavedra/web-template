@@ -1,10 +1,11 @@
 import Button from "../../components/Button/Button";
 import ClassCard from "../../components/ClassCard/ClassCard";
+import LoginPage from "../../components/LoginPage/LoginPage";
 
-export default function LoginPage() {
+export default function Login() {
   return (
     <>
-      <ClassCard startTime={undefined} title={""} level={""} location={""} attending={0} seats={0} price={""}></ClassCard>
+      <LoginPage></LoginPage>
     </>
   );
 }

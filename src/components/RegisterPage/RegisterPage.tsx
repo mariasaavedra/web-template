@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
 import useInput from "../../hooks/useInput";
 import { ComponentProps } from "../../interfaces/ComponentProps";
 import { FTRootState } from "../../interfaces/FTRootState";
@@ -8,7 +6,7 @@ import {
   MaybeParentComponentProps,
   ParentComponentProps,
 } from "../../interfaces/ParentComponentProps";
-import Input from "../UI/Input";
+import Input from "../Input/Input";
 
 const Label = ({ children }: ParentComponentProps) => (
   <h2 className="text-sm font-bold text-naturalGrey-800 mb-2">{children}</h2>
@@ -60,24 +58,25 @@ const RegisterPage = ({ cancel }: RegisterPageProps) => {
   const phoneNumber = useInput("");
   const location = useInput("");
 
-  const dispatch = useDispatch();
-  const errors = useSelector((store: FTRootState) => store.errors);
-  const history = useHistory();
+  // const dispatch = useDispatch();
+  // const errors = useSelector((store: FTRootState) => store.errors);
+  // const history = useHistory();
+  const errors: Array<unknown> = [];
 
   const registerUser = (event) => {
     event.preventDefault();
 
-    dispatch({
-      type: "REGISTER",
-      payload: {
-        username: username.value,
-        password: password.value,
-        first_name: firstName.value,
-        last_name: lastName.value,
-        email: email.value,
-        phoneNumber: phoneNumber.value,
-      },
-    });
+    // dispatch({
+    //   type: "REGISTER",
+    //   payload: {
+    //     username: username.value,
+    //     password: password.value,
+    //     first_name: firstName.value,
+    //     last_name: lastName.value,
+    //     email: email.value,
+    //     phoneNumber: phoneNumber.value,
+    //   },
+    // });
   };
 
   return (

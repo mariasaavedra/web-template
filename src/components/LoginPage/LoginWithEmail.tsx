@@ -20,7 +20,7 @@ interface LoginWithEmailProps extends ComponentProps {
 const LoginWithEmail = ({ cancel }: LoginWithEmailProps) => (
   <div className="flex flex-col justify-center items-center mx-auto p-4">
     <div className="mb-[25%] w-full">
-      <img src="images/logo.png" alt="logo" />
+      <img src="/images/logo.png" alt="logo" />
     </div>
     <button
       className="self-start mb-12 text-naturalGrey-400 hover:text-primaryGreen-600"
