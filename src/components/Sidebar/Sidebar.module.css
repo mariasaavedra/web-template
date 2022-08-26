@@ -1,22 +1,6 @@
 .SidebarComponent {
-  /* Side bar */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 0px 16px;
-  gap: 16px;
-
-  position: absolute;
-  width: 220px;
-  height: 982px;
-  left: 0px;
-  top: 0px;
 
   /* Shades Color/White 0 F */
-
   background: #ffffff;
   box-shadow: 4px 0px 16px #e1e5f1;
 }
