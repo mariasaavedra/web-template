@@ -27,7 +27,7 @@ export default function Sidebar(props: SidebarProps) {
       <NavItem
         label={"Trainers"}
         icon={<FitnessCenter></FitnessCenter>}
-        anchor={"/trainers"}
+        anchor={"/admin/trainers"}
       ></NavItem>
       <NavItem
         label={"Classes"}
