@@ -23,21 +23,21 @@ export default function Sidebar(props: SidebarProps) {
         className="p-8"
         alt="Logo"
       />
-      <NavItem label={"Users"} icon={<Person></Person>} anchor={"#"}></NavItem>
+      <NavItem label={"Users"} icon={<Person></Person>} anchor={"/admin/users"}></NavItem>
       <NavItem
         label={"Trainers"}
         icon={<FitnessCenter></FitnessCenter>}
-        anchor={"#"}
+        anchor={"/trainers"}
       ></NavItem>
       <NavItem
         label={"Classes"}
         icon={<DocumentScanner></DocumentScanner>}
-        anchor={"#"}
+        anchor={"/member/classes"}
       ></NavItem>
       <NavItem
         label={"History"}
         icon={<ManageHistory></ManageHistory>}
-        anchor={"#"}
+        anchor={"/member/history"}
       ></NavItem>
     </div>
   );
