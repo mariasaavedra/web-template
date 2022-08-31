@@ -4,13 +4,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 
+@layer utilities {
+  .grid-cols-layout {
+    grid-template-columns: minmax(50px, 220px) 1fr;
+  }
+}
 
 html,
 body {
   background: #f2f2f2;
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 a {

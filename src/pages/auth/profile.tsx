@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import styles from './profile.module.css';
 
-interface ProfileProps {
+export interface ProfileProps {
   name: string;
   email: string;
   phone: string;

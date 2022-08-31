@@ -19,8 +19,8 @@ export default function Sidebar(props: SidebarProps) {
       {/* <Logo></Logo> */}
       <img
         src={"/images/logo.png"}
-        width={"200px"}
         height="auto"
+        className="p-8"
         alt="Logo"
       />
       <NavItem label={"Users"} icon={<Person></Person>} anchor={"#"}></NavItem>
