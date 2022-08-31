@@ -3,6 +3,13 @@ import Logo from "../Logo/Logo";
 import NavItem from "../NavItem/NavItem";
 import styles from "./Sidebar.module.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
+import Image from "next/image";
+import {
+  DocumentScanner,
+  FitnessCenter,
+  ManageHistory,
+  Person,
+} from "@mui/icons-material";
 
 export interface SidebarProps {}
 
@@ -10,29 +17,26 @@ export default function Sidebar(props: SidebarProps) {
   return (
     <div className={styles.SidebarComponent}>
       {/* <Logo></Logo> */}
-      <NavItem
-        label={"Dashboard"}
-        icon={<DashboardIcon></DashboardIcon>}
-        anchor={"#"}
-      ></NavItem>
-      <NavItem
-        label={"Users"}
-        icon={<DashboardIcon></DashboardIcon>}
-        anchor={"#"}
-      ></NavItem>
+      <img
+        src={"/images/logo.png"}
+        width={"200px"}
+        height="auto"
+        alt="Logo"
+      />
+      <NavItem label={"Users"} icon={<Person></Person>} anchor={"#"}></NavItem>
       <NavItem
         label={"Trainers"}
-        icon={<DashboardIcon></DashboardIcon>}
+        icon={<FitnessCenter></FitnessCenter>}
         anchor={"#"}
       ></NavItem>
       <NavItem
         label={"Classes"}
-        icon={<DashboardIcon></DashboardIcon>}
+        icon={<DocumentScanner></DocumentScanner>}
         anchor={"#"}
       ></NavItem>
       <NavItem
         label={"History"}
-        icon={<DashboardIcon></DashboardIcon>}
+        icon={<ManageHistory></ManageHistory>}
         anchor={"#"}
       ></NavItem>
     </div>
