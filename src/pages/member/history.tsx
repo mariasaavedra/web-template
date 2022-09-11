@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ClassCardList from "../../components/ClassCardList/ClassCardList";
+import Content from "../../components/Content/Content";
 import Header from "../../components/Header/Header";
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -11,7 +12,7 @@ export default function History() {
     <>
       <Layout>
         <Sidebar></Sidebar>
-        <div>
+        <Content>
           <Header
             title={"History"}
             toggleView={true}
@@ -24,7 +25,7 @@ export default function History() {
           ) : (
             <ClassCardList></ClassCardList>
           )}
-        </div>
+        </Content>
       </Layout>
     </>
   );

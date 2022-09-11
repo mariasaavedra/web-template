@@ -11,15 +11,13 @@ export interface ViewToggleProps {
 export default function ViewToggle(props: ViewToggleProps) {
   return (
     <div className={styles.ViewToggleComponent}>
-      {props.displayTableIcon ? (
-        <Button onClick={() => props.toggleFn()}>
-          <Grid3x3></Grid3x3>
-        </Button>
-      ) : (
-        <Button onClick={() => props.toggleFn()}>
-          <TableRows></TableRows>
-        </Button>
-      )}
+      <Button onClick={() => props.toggleFn()}>
+        <Grid3x3></Grid3x3>
+      </Button>
+
+      <Button onClick={() => props.toggleFn()}>
+        <TableRows></TableRows>
+      </Button>
     </div>
   );
 }

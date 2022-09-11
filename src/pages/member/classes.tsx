@@ -7,6 +7,8 @@ import {
   useState,
 } from "react";
 import ClassCardList from "../../components/ClassCardList/ClassCardList";
+import Content from "../../components/Content/Content";
+import Header from "../../components/Header/Header";
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Table from "../../components/Table/Table";
@@ -140,25 +142,15 @@ export default function History() {
     <>
       <Layout>
         <Sidebar></Sidebar>
-        <div>
-          <h1>Classes</h1>
+        <Content>
+          <Header title={"Classes"}></Header>
 
-          {displayByTable ? (
-            <Button onClick={() => setDisplayByTable((prev) => !prev)}>
-              View by grid
-            </Button>
-          ) : (
-            <Button onClick={() => setDisplayByTable((prev) => !prev)}>
-              View by table
-            </Button>
-          )}
-
-          {displayByTable ? (
+          {!displayByTable ? (
             <Table columns={defaultColumns} data={defaultData}></Table>
           ) : (
             <ClassCardList></ClassCardList>
           )}
-        </div>
+        </Content>
       </Layout>
     </>
   );

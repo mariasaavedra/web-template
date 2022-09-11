@@ -1,3 +1,4 @@
+import Content from "../../components/Content/Content";
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
@@ -6,9 +7,9 @@ export default function Users() {
     <>
       <Layout>
         <Sidebar></Sidebar>
-        <div>
+        <Content>
           <h1>Users</h1>
-        </div>
+        </Content>
       </Layout>
     </>
   );
