@@ -15,7 +15,7 @@ export interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <div className={styles.HeaderComponent}>
+    <div className={styles.HeaderComponent + ' mt-0 mb-8'}>
       <Title> {props.title || "Example Title"}</Title>
       <InputSearch></InputSearch>
       <ViewToggle displayTableIcon={false} toggleFn={() => {}}></ViewToggle>
