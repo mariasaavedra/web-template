@@ -11,4 +11,5 @@ services:
     volumes: 
       - ./public:/app/public
       - ./src:/app/src
+      - ./next.config.js:/app/next.config.js
 
