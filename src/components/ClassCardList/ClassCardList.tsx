@@ -13,7 +13,7 @@ export interface ClassCard {
 }
 
 export interface ClassCardListProps {
-  classes?: Array<ClassCard>;
+  classes: Array<ClassCard>;
 }
 
 export default function ClassCardList(props: ClassCardListProps) {
@@ -39,81 +39,4 @@ export default function ClassCardList(props: ClassCardListProps) {
         })}
     </div>
   );
-}
-
-ClassCardList.defaultProps = {
-  classes: [
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-    {
-      startTime: new Date(),
-      title: "Chest Workout",
-      level: "Expert",
-      location: "TBD",
-      attending: 10,
-      seats: 20,
-      price: "$5.99",
-    },
-  ],
-};
+      }
