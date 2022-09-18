@@ -3,7 +3,7 @@
   box-sizing: border-box;
   position: relative;
   /* Auto layout */
-  display: flex;
+  display: inline-flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
@@ -24,6 +24,7 @@
   order: 0;
   flex-grow: 1;
   overflow: hidden;
+  margin: 4px;
 }
 .details {
   /* Personal Details */
@@ -46,7 +47,7 @@
   align-self: stretch;
   flex-grow: 0;
 }
-span {
+.label {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;

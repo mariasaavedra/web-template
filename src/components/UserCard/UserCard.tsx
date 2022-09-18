@@ -18,7 +18,7 @@ export default function UserCard(props: UserCardProps) {
     <div className={styles.UserCardComponent}>
       <Image
         className={"overflow-hidden absolute top-0 left-0 z-[-1]"}
-        src={props?.coverUrl || "/images/user-pattern.svg"}
+        src={"/images/user-pattern.svg"}
         layout="fill"
         width="400px"
         height="400px"
@@ -30,9 +30,9 @@ export default function UserCard(props: UserCardProps) {
         <span className={styles.name}>
           {props.first_name} {props.last_name}
         </span>
-        <span>{props.dob}</span>
-        <span>{props.email}</span>
-        <span>
+        <span className={styles.label}>{props.dob}</span>
+        <span className={styles.label}> {props.email}</span>
+        <span className={styles.label}>
           {props.city}, {props.city}, {props.zip}
         </span>
       </div>

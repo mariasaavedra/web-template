@@ -17,13 +17,12 @@ export default function Sidebar(props: SidebarProps) {
   return (
     <div className={styles.SidebarComponent}>
       {/* <Logo></Logo> */}
-      <img
-        src={"/images/logo.png"}
-        height="auto"
-        className="p-8"
-        alt="Logo"
-      />
-      <NavItem label={"Users"} icon={<img src="/images/icons/user_icon.png"></img>} anchor={"/admin/users"}></NavItem>
+      <img src={"/images/logo.png"} height="auto" className="p-8" alt="Logo" />
+      <NavItem
+        label={"Users"}
+        icon={<img src="/images/icons/user_icon.png"></img>}
+        anchor={"/admin/users"}
+      ></NavItem>
       <NavItem
         label={"Trainers"}
         icon={<img src="/images/icons/trainers_icon.png"></img>}
@@ -39,6 +38,21 @@ export default function Sidebar(props: SidebarProps) {
         icon={<img src="/images/icons/history_icon.png"></img>}
         anchor={"/member/history"}
       ></NavItem>
+
+      {/* Bottom Anchored Items */}
+      <div className="absolute bottom-0">
+        <NavItem
+          label={"Profile"}
+          icon={<img src="/images/icons/history_icon.png"></img>}
+          anchor={"/auth/profile"}
+        ></NavItem>
+
+        <NavItem
+          label={"Log Out"}
+          icon={<img src="/images/icons/history_icon.png"></img>}
+          anchor={"/auth/logout"}
+        ></NavItem>
+      </div>
     </div>
   );
 }
