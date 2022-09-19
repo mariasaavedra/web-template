@@ -3,8 +3,10 @@ import { useCountdown } from "../../hooks/useCountdown";
 import Button from "../Button/Button";
 import styles from "./ClassCard.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface ClassCardProps {
+  id: string | number;
   startTime: Date;
   title: string;
   level: string;
@@ -19,16 +21,16 @@ export default function ClassCard(props: ClassCardProps) {
   const [days, hours, minutes, seconds] = useCountdown(props.startTime);
   return (
     <div className={styles.ClassCardComponent}>
-      <Image
+      {/* <Image
         className={"overflow-hidden absolute top-0 left-0 z-[-1]"}
         src={props?.coverUrl || "/images/squares.svg"}
         layout="fill"
-        width='500px'
+        width="500px"
         height="500px"
         objectPosition={-100}
-        objectFit='contain'
+        objectFit="contain"
         alt="background pattern"
-      />
+      /> */}
       <div className={styles.countdown}>
         <span>{days}d</span>:<span>{hours}h</span>:<span>{minutes}m</span>
       </div>
@@ -49,9 +51,11 @@ export default function ClassCard(props: ClassCardProps) {
           </p>
         </div>
       </div>
+
       <Button stretch={true} backgroundColor="primary">
-        Register
+        <Link href={`/member/classes/${props.id}`}>Register</Link>
       </Button>
+
       {/* <button className={styles.button}>Register</button> */}
     </div>
   );

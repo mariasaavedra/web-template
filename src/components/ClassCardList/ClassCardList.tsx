@@ -3,6 +3,7 @@ import ClassCard from "../ClassCard/ClassCard";
 import styles from "./ClassCardList.module.css";
 
 export interface ClassCard {
+  id: string | number;
   startTime: Date;
   title: string;
   level: string;
@@ -27,6 +28,7 @@ export default function ClassCardList(props: ClassCardListProps) {
           return (
             <ClassCard
               key={i}
+              id={classObj.id}
               startTime={classObj.startTime}
               title={classObj.title}
               level={classObj.level}

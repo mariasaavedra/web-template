@@ -50,7 +50,7 @@ export default function Sidebar(props: SidebarProps) {
         <NavItem
           label={"Log Out"}
           icon={<img src="/images/icons/history_icon.png"></img>}
-          anchor={"/auth/logout"}
+          anchor={"/api/auth/logout"}
         ></NavItem>
       </div>
     </div>
