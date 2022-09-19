@@ -16,9 +16,9 @@ export interface SidebarProps {}
 
 export default function Sidebar(props: SidebarProps) {
   const { user, isLoading } = useUser();
-  const isAdmin = false;
+  const isAdmin = true;
   const isTrainer = false;
-  const isMember = true;
+  const isMember = false;
   if (isLoading) {
     return <div>Loading ...</div>;
   }

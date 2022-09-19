@@ -14,6 +14,7 @@ export interface UserCardProps {
 }
 
 export default function UserCard(props: UserCardProps) {
+  const isAdmin = true;
   return (
     <div className={styles.UserCardComponent}>
       <Image
@@ -35,6 +36,18 @@ export default function UserCard(props: UserCardProps) {
         <span className={styles.label}>
           {props.city}, {props.city}, {props.zip}
         </span>
+        {isAdmin && (
+          <>
+            <div className="absolute bottom-2 right-2">
+              <button className="bg-red-500 p-1 rounded-full mx-1  inline-block">
+                <img src="/images/icons/trash_icon.png" />
+              </button>
+              <button className="bg-green-500 p-1 rounded-full mx-1  inline-block">
+                <img src="/images/icons/edit_icon.png" />
+              </button>
+            </div>
+          </>
+        )}
       </div>
       <div className={styles.photo}>
         <img

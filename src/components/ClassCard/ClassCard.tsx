@@ -18,11 +18,11 @@ export interface ClassCardProps {
 }
 
 export default function ClassCard(props: ClassCardProps) {
-
+  const isAdmin = true;
   const [days, hours, minutes, seconds] = useCountdown(props.startTime);
   return (
     <div className={styles.ClassCardComponent}>
-      {/* <Image
+      <Image
         className={"overflow-hidden absolute top-0 left-0 z-[-1]"}
         src={props?.coverUrl || "/images/squares.svg"}
         layout="fill"
@@ -31,7 +31,7 @@ export default function ClassCard(props: ClassCardProps) {
         objectPosition={-100}
         objectFit="contain"
         alt="background pattern"
-      /> */}
+      />
       <div className={styles.countdown}>
         <span>{days}d</span>:<span>{hours}h</span>:<span>{minutes}m</span>
       </div>
@@ -47,15 +47,31 @@ export default function ClassCard(props: ClassCardProps) {
             <span className={styles.duration}>2 Hours</span>
           </p>
           <p className={styles.location + " mt-4"}>{props.location}</p>
-          <p className={styles.attendance + " mt-4"}>
-            0/{props.capacity}
-          </p>
+          <p className={styles.attendance + " mt-4"}>0/{props.capacity}</p>
         </div>
       </div>
 
-      <Button stretch={true} backgroundColor="primary">
-        <Link href={`/member/classes/${props.id}`}>Register</Link>
-      </Button>
+      <div className="w-full cursor-pointer z-[100]">
+        {isAdmin && (
+          <>
+            <div className="absolute bottom-2 right-2">
+              <button className="bg-red-500 shadow-md p-3 rounded-full mx-1  inline-block">
+                <img src="/images/icons/trash_icon.png" />
+              </button>
+              <button className="bg-green-500 shadow-md p-3 rounded-full mx-1  inline-block">
+                <img src="/images/icons/edit_icon.png" />
+              </button>
+            </div>
+          </>
+        )}
+        {!isAdmin && (
+          <>
+            <Button stretch={true} backgroundColor="primary">
+              <Link href={`/member/classes/${props.id}`}>Register</Link>
+            </Button>
+          </>
+        )}
+      </div>
 
       {/* <button className={styles.button}>Register</button> */}
     </div>
