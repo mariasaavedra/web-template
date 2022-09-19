@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+
 
 @layer utilities {
   .grid-cols-layout {
@@ -15,7 +17,7 @@ body {
   background: #f2f2f2;
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: 'Montserrat', serif !important;
 }
 
 a {

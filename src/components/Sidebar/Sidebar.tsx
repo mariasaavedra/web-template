@@ -10,49 +10,81 @@ import {
   ManageHistory,
   Person,
 } from "@mui/icons-material";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export interface SidebarProps {}
 
 export default function Sidebar(props: SidebarProps) {
+  const { user, isLoading } = useUser();
+  const isAdmin = false;
+  const isTrainer = false;
+  const isMember = true;
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
   return (
     <div className={styles.SidebarComponent}>
       {/* <Logo></Logo> */}
       <img src={"/images/logo.png"} height="auto" className="p-8" alt="Logo" />
-      <NavItem
-        label={"Users"}
-        icon={<img src="/images/icons/user_icon.png"></img>}
-        anchor={"/admin/users"}
-      ></NavItem>
-      <NavItem
-        label={"Trainers"}
-        icon={<img src="/images/icons/trainers_icon.png"></img>}
-        anchor={"/admin/trainers"}
-      ></NavItem>
-      <NavItem
-        label={"Classes"}
-        icon={<img src="/images/icons/class_list_icon.png"></img>}
-        anchor={"/member/classes"}
-      ></NavItem>
-      <NavItem
-        label={"History"}
-        icon={<img src="/images/icons/history_icon.png"></img>}
-        anchor={"/member/history"}
-      ></NavItem>
 
-      {/* Bottom Anchored Items */}
-      <div className="absolute bottom-0">
-        <NavItem
-          label={"Profile"}
-          icon={<img src="/images/icons/history_icon.png"></img>}
-          anchor={"/auth/profile"}
-        ></NavItem>
+      {user && (
+        <>
+          {isAdmin && (
+            <>
+              <NavItem
+                label={"Users"}
+                icon={<img src="/images/icons/user_icon.png"></img>}
+                anchor={"/admin/users"}
+              ></NavItem>
+              <NavItem
+                label={"Trainers"}
+                icon={<img src="/images/icons/trainers_icon.png"></img>}
+                anchor={"/admin/trainers"}
+              ></NavItem>
+              <NavItem
+                label={"Classes"}
+                icon={<img src="/images/icons/class_list_icon.png"></img>}
+                anchor={"/member/classes"}
+              ></NavItem>
+              <NavItem
+                label={"History"}
+                icon={<img src="/images/icons/history_icon.png"></img>}
+                anchor={"/member/history"}
+              ></NavItem>
+            </>
+          )}
+          {isMember && (
+            <>
+              <NavItem
+                label={"Classes"}
+                icon={<img src="/images/icons/class_list_icon.png"></img>}
+                anchor={"/member/classes"}
+              ></NavItem>
+              <NavItem
+                label={"History"}
+                icon={<img src="/images/icons/history_icon.png"></img>}
+                anchor={"/member/history"}
+              ></NavItem>
+            </>
+          )}
 
-        <NavItem
-          label={"Log Out"}
-          icon={<img src="/images/icons/history_icon.png"></img>}
-          anchor={"/api/auth/logout"}
-        ></NavItem>
-      </div>
+          {/* Bottom Anchored Items */}
+          <div className="absolute bottom-0">
+            <NavItem
+              label={"Profile"}
+              icon={<img src="/images/icons/history_icon.png"></img>}
+              anchor={"/auth/profile"}
+            ></NavItem>
+
+            <NavItem
+              label={"Log Out"}
+              icon={<img src="/images/icons/history_icon.png"></img>}
+              anchor={"/api/auth/logout"}
+            ></NavItem>
+          </div>
+        </>
+      )}
     </div>
   );
 }

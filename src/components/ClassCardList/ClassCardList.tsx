@@ -4,11 +4,11 @@ import styles from "./ClassCardList.module.css";
 
 export interface ClassCard {
   id: string | number;
-  startTime: Date;
+  start_time: Date;
   title: string;
   level: string;
   location: string;
-  attending: number;
+  capacity: string;
   seats: number;
   price: string | number;
 }
@@ -29,11 +29,11 @@ export default function ClassCardList(props: ClassCardListProps) {
             <ClassCard
               key={i}
               id={classObj.id}
-              startTime={classObj.startTime}
+              startTime={classObj.start_time}
               title={classObj.title}
               level={classObj.level}
               location={classObj.location}
-              attending={classObj.attending}
+              capacity={classObj.capacity}
               seats={classObj.seats}
               price={classObj.price}
             ></ClassCard>

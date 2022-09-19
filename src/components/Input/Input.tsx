@@ -9,7 +9,7 @@ export default function Input(props: InputProps) {
   return (
     <div className={styles.InputComponent}>
       <input
-        className={`rounded-2xl w-full border py-3 px-4 relative right-[6px] 
+        className={`bg-white text-black rounded-2xl w-full border py-3 px-4 relative right-[6px] 
         ${props.className} 
         ${props.error && "border-error-400"}`}
         {...props}

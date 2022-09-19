@@ -11,13 +11,14 @@ export interface ClassCardProps {
   title: string;
   level: string;
   location: string;
-  attending: number;
+  capacity: string;
   seats: number;
   price: string | number;
   coverUrl?: string;
 }
 
 export default function ClassCard(props: ClassCardProps) {
+
   const [days, hours, minutes, seconds] = useCountdown(props.startTime);
   return (
     <div className={styles.ClassCardComponent}>
@@ -47,7 +48,7 @@ export default function ClassCard(props: ClassCardProps) {
           </p>
           <p className={styles.location + " mt-4"}>{props.location}</p>
           <p className={styles.attendance + " mt-4"}>
-            {props.attending}/{props.seats}
+            0/{props.capacity}
           </p>
         </div>
       </div>
